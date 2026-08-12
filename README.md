@@ -11,3 +11,10 @@ Tracking my progress from Associate Application Service Engineer to DevOps Engin
 - [ ] Phase 4 — AWS Core Services
 - [ ] Phase 5 — Infrastructure as Code (Terraform)
 - [ ] Phase 6 — Kubernetes
+
+
+## Today'S Progres
+- Completed Day1 : git init ,add,commit,log
+
+## Resources
+- Pro Git Book : https://git-scm.com/book
