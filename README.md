@@ -13,8 +13,8 @@ Tracking my progress from Associate Application Service Engineer to DevOps Engin
 - [ ] Phase 6 — Kubernetes
 
 
-## Today'S Progres
-- Completed Day1 : git init ,add,commit,log
+## Today's Progress
+- Completed Day1 : git init , add, commit, log
 
 ## Resources
 - Pro Git Book : https://git-scm.com/book
