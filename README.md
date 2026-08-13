@@ -16,7 +16,7 @@ to DevOps Engineer, using hands-on projects and real tools.
 |---|---|---|
 | 00 | Linux, Bash, Python, Databases | ✅ Complete (prior experience) |
 | 01 | Git & Version Control | 🔄 Day 6 of 21 |
-| 02 | Docker & Containerisation | ⏳ Not started |
+| 02 | Docker & Containerisation |🔄 Day 9 of 21 |
 | 03 | CI/CD Pipelines | ⏳ Not started |
 | 04 | AWS Core Services | ⏳ Not started |
 | 05 | Infrastructure as Code (Terraform) | ⏳ Not started |
