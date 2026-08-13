@@ -1,23 +1,40 @@
 # DevOps Learning Journey — BhanuPrakash
 
 ## About
-Tracking my progress from Associate Application Service Engineer to DevOps Engineer.
+Structured self-study path from Associate Application Service Engineer
+to DevOps Engineer, using hands-on projects and real tools.
 
-## Roadmap
-- [x] Phase 0 — Linux, Scripting, Databases (already done!)
-- [ ] Phase 1 — Git & Version Control (current)
-- [ ] Phase 2 — Docker & Containers
-- [ ] Phase 3 — CI/CD Pipelines
-- [ ] Phase 4 — AWS Core Services
-- [ ] Phase 5 — Infrastructure as Code (Terraform)
-- [ ] Phase 6 — Kubernetes
+**Start date:** 2024  
+**Daily commitment:** 30–60 minutes  
+**Target role:** DevOps / Cloud Engineer (AWS focus)
 
+---
 
-## Today's Progress
-- Completed Day1 : git init , add, commit, log
+## Roadmap progress
 
-## Resources
-- Pro Git Book : https://git-scm.com/book
+| Phase | Topic | Status |
+|---|---|---|
+| 00 | Linux, Bash, Python, Databases | ✅ Complete (prior experience) |
+| 01 | Git & Version Control | 🔄 Day 6 of 21 |
+| 02 | Docker & Containerisation | ⏳ Not started |
+| 03 | CI/CD Pipelines | ⏳ Not started |
+| 04 | AWS Core Services | ⏳ Not started |
+| 05 | Infrastructure as Code (Terraform) | ⏳ Not started |
+| 06 | Kubernetes & EKS | ⏳ Not started |
+| 07 | Monitoring & Observability | ⏳ Not started |
+| 08 | GitOps & DevSecOps | ⏳ Not started |
 
-## Git commands learned so far
-- git init, add, commit, log, diff, status
+---
+
+## Repository structure
+---
+
+## Tools and technologies
+Git · GitHub · Docker · GitHub Actions · 
+Jenkins · AWS · Terraform · Kubernetes · 
+Prometheus · Grafana · Linux · Bash · Python
+
+---
+
+## Connect
+GitHub: [BhanuKambalapalli007](https://github.com/BhanuKambalapalli007)
