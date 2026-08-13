@@ -18,3 +18,6 @@ Tracking my progress from Associate Application Service Engineer to DevOps Engin
 
 ## Resources
 - Pro Git Book : https://git-scm.com/book
+
+## Git commands learned so far
+- git init, add, commit, log, diff, status
