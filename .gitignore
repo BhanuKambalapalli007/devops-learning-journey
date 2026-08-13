@@ -1,0 +1,38 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Environment & secrets — NEVER commit these
+.env
+.env.*
+*.key
+*.pem
+secrets.yaml
+
+# Logs
+*.log
+logs/
+
+# Build outputs
+dist/
+build/
+*.zip
+*.tar.gz
+
+# Terraform (we'll use this in Phase 5)
+.terraform/
+*.tfstate
+*.tfstate.backup
