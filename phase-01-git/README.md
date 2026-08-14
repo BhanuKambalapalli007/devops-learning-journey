@@ -1,7 +1,7 @@
 # Phase 01 — Git & Version Control
 
 ## Status
-🔄 In Progress — Day 6 of 21
+🔄 Complete — Day 10 of 21 finished
 
 ## What I am learning
 - Git fundamentals: init, add, commit, log
