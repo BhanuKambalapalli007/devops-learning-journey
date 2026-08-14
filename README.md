@@ -1,4 +1,5 @@
-# DevOps Learning Journey — Bhanu Kambalapalli
+# DevOps & Cloud Learning Journey — BhanuPrakash Kambalapalli
+
 
 ## About
 Structured self-study path from Associate Application Service Engineer
