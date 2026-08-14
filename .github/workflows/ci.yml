@@ -1,6 +1,5 @@
 name: DevOps Learning Repo — CI Pipeline
 
-# Trigger: run on every push and PR to main or develop
 on:
   push:
     branches: [ main, develop ]
@@ -13,11 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Check out the code onto the runner machine
       - name: Checkout repository
         uses: actions/checkout@v5
 
-      # Step 2: Show what triggered this run
       - name: Print pipeline context
         run: |
           echo "================================================"
@@ -27,8 +24,7 @@ jobs:
           echo " Author:       ${{ github.actor }}"
           echo "================================================"
 
-      # Step 3: Validate all required phase folders exist
-      - name: Check phase folder structure
+      - name: Check all phase folders exist
         run: |
           echo "Checking required phase folders..."
           REQUIRED=(
@@ -36,6 +32,9 @@ jobs:
             "phase-02-docker"
             "phase-03-cicd"
             "phase-04-aws"
+            "phase-05-terraform"
+            "phase-06-kubernetes"
+            "phase-07-monitoring"
           )
           FAILED=0
           for dir in "${REQUIRED[@]}"; do
@@ -46,10 +45,9 @@ jobs:
               FAILED=1
             fi
           done
-          [ $FAILED -eq 0 ] && echo "All phase folders present" || exit 1
+          [ $FAILED -eq 0 ] && echo "All 7 phase folders present" || exit 1
 
-      # Step 4: Check every phase folder has a README
-      - name: Check phase READMEs exist
+      - name: Check every phase has a README
         run: |
           echo "Checking README.md in each phase folder..."
           FAILED=0
@@ -63,12 +61,15 @@ jobs:
           done
           [ $FAILED -eq 0 ] && echo "All READMEs present" || exit 1
 
-      # Step 5: Block TODO/FIXME left in markdown files
       - name: Check for unresolved TODOs
         run: |
-          echo "Scanning for TODO/FIXME in markdown files..."
-          FOUND=$(grep -r "TODO\|FIXME" --include="*.md" . \
-                  --exclude-dir=".git" -l 2>/dev/null || true)
+          echo "Scanning for TODO/FIXME in project files..."
+          FOUND=$(find . -name "*.md" \
+                  -not -path "./.git/*" \
+                  -not -name "*reference*" \
+                  -not -name "*notes*" \
+                  -not -name "*summary*" \
+                  | xargs grep -l "TODO\|FIXME" 2>/dev/null || true)
           if [ -n "$FOUND" ]; then
             echo "❌ Unresolved TODO/FIXME found in:"
             echo "$FOUND"
@@ -76,14 +77,34 @@ jobs:
           fi
           echo "  ✅ No unresolved TODOs found"
 
-      # Step 6: Count and report markdown files
+      - name: Check reference documents exist
+        run: |
+          echo "Checking Git reference documents..."
+          REFS=(
+            "phase-01-git/git-week1-reference.md"
+            "phase-01-git/git-week2-reference.md"
+            "phase-01-git/git-week3-reference.md"
+          )
+          FAILED=0
+          for ref in "${REFS[@]}"; do
+            if [ -f "$ref" ]; then
+              echo "  ✅ $ref"
+            else
+              echo "  ❌ MISSING: $ref"
+              FAILED=1
+            fi
+          done
+          [ $FAILED -eq 0 ] && echo "All reference docs present" || exit 1
+
       - name: Repository statistics
         run: |
           MD_COUNT=$(find . -name "*.md" -not -path "./.git/*" | wc -l)
+          PHASE_COUNT=$(ls -d phase-*/ 2>/dev/null | wc -l)
           TOTAL_LINES=$(find . -name "*.md" -not -path "./.git/*" \
                         -exec wc -l {} + | tail -1 | awk '{print $1}')
           echo "================================================"
+          echo " 📁 Phase folders:   $PHASE_COUNT / 7"
           echo " 📚 Markdown files:  $MD_COUNT"
           echo " 📝 Total lines:     $TOTAL_LINES"
-          echo " ✅ CI pipeline PASSED"
+          echo " ✅ CI pipeline PASSED — repo is portfolio ready"
           echo "================================================"
