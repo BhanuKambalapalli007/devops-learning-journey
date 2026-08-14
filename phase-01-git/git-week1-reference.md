@@ -393,7 +393,7 @@ build/
 |---|---|
 | `*.log` | Any file ending in `.log` anywhere in project |
 | `logs/` | The entire `logs/` directory |
-| `/TODO` | Only the `TODO` file in the root, not subdirectories |
+| `/CHANGELOG` | Only the `CHANGELOG` file in the root, not subdirectories |
 | `doc/*.txt` | `.txt` files in `doc/` but not `doc/sub/` |
 | `**/temp` | `temp` folder at any depth in the project |
 | `!important.log` | Exception — do NOT ignore this specific file |
