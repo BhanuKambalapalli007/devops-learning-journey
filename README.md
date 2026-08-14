@@ -1,4 +1,4 @@
-# DevOps Learning Journey — BhanuPrakash
+# DevOps Learning Journey — Bhanu Kambalapalli
 
 ## About
 Structured self-study path from Associate Application Service Engineer
